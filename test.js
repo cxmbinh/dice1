@@ -10,6 +10,10 @@ mydicesubmit.addEventListener('click', () => {
     const images =[];
     const resultgame =document.getElementById('resultgame');
     const mybetpoint = document.getElementById('mybetpoint').value;
+    let betpoint = Number(document.getElementById('mybetpoint').value);
+    let betodd = document.getElementById('betodd');
+    let beteven = document.getElementById('beteven');
+    let gamepoints = document.getElementById('gamepoints');
     if(points<=0){
         resultgame.style.color ='red';
         resultgame.textContent = 'You Lose';
@@ -17,6 +21,10 @@ mydicesubmit.addEventListener('click', () => {
     else if(points>=500){
         resultgame.style.color = 'green';
         resultgame.textContent = 'You Win';
+    }
+    else if(betpoint>points){
+        resultgame.style.color ='red';
+        resultgame.textContent = 'CMM chs vừa vừa thôi gian vãi l*n, cược thì thấp thấp thôi cao hơn điểm cmm à????';
     }
     else{
         if(beteven.checked==true || betodd.checked==true){
@@ -29,10 +37,7 @@ mydicesubmit.addEventListener('click', () => {
              mydiceoutputi.innerHTML = images.join('');
              let sum = 0;
              
-             let betpoint = Number(document.getElementById('mybetpoint').value);
-             let betodd = document.getElementById('betodd');
-             let beteven = document.getElementById('beteven');
-             let gamepoints = document.getElementById('gamepoints');
+             
              
              for (let i = 0; i < values.length; i++) {
                  sum += values[i];
