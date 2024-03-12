@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dice roller</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="dicecontainer">
+        
+        <h1 id="diceh1">DICE roller</h1>
+        <div class="gamelaw">
+            <ui>Rules:</ui><br>
+            <ui>Choose roll</ui><br>
+            <ui>CHoose betpoints</ui><br>
+            <ui>points<0:you lose  </ui><br>
+            <ui>points>500:you win</ui><br>
+            <ui>Have a good game</ui><br>
+        </div>
+        <div id="gamepoints">You have 100 points</div>
+        <input type="number" id="mynumdice" value="1" min="1" max="6">
+        <button id="mydicesubmit" type="button">roll</button><br>
+        <h2>CHOSSE POINT YOU WANT TO BET</h2>
+        <input type="number" id="mybetpoint" value="1" min="1" ><br>
+        <div id="optionsbet">
+            <input type="radio" id="betodd" name="unit">
+            <label for="betodd" class="labelbettype">Odd</label><br>
+            <input type="radio" id="beteven" name="unit">
+            <label for="beteven" class="labelbettype">Even</label><br>
+        </div>
+        <div id="mydiceoutputp"></div>
+        <div id="mydiceoutputi"></div>
+        <div id="resultgame"></div>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>
